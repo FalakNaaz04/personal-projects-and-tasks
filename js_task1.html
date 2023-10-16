@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT - TASK 1</title>
+    <style>
+        body {
+            display: block;
+            width: 500px;
+            padding-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: xx-large;
+        }
+
+        #n {
+            height: 30px;
+            width: 200px;
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+    <h5>Write a JavaScript function that reverse a number.</h5>
+    number: <input type="number" id="n"><br>
+    <button onclick="display()">Reverse</button>
+    <h6>reversed number:</h6>
+    <span id="result"></span>
+    <script>
+        function reverse(n, reversed = 0) {
+            if (n == 0) {
+                return reversed;
+            }
+            else {
+                return reverse(Math.floor(n / 10), reversed * 10 + n % 10);
+            }
+        }
+        function display() {
+            num = document.getElementById("n").value;
+            r_num = reverse(num);
+            document.getElementById("result").innerHTML = r_num;
+        }
+
+    </script>
+</body>
+
+</html>

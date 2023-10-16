@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT - TASK 3</title>
+    <style>
+        body {
+            display: block;
+            width: 500px;
+            padding-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Write a JavaScript program to calculate multiplication and division of
+        two numbers (input from user).</h3>
+    num 1: <input type="number" id="n1"><br><br>
+    num 2: <input type="number" id="n2"><br><br>
+    <button onclick="multiply()">multiply</button>
+    <button onclick="divide()">divide</button><br>
+    <h4>Result is </h4>
+    <span id="result"></span>
+    <script>
+        function multiply() {
+            num1 = document.getElementById("n1").value;
+            num2 = document.getElementById("n2").value;
+            document.getElementById("result").innerHTML = num1 * num2;
+        }
+        function divide() {
+            num1 = document.getElementById("n1").value;
+            num2 = document.getElementById("n2").value;
+            document.getElementById("result").innerHTML = num1 / num2;
+        }
+    </script>
+</body>
+
+</html>

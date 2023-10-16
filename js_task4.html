@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT - TASK 4</title>
+    <style>
+        body {
+            display: block;
+            width: 500px;
+            padding-top: 70px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: large;
+        }
+
+        #d,
+        #t {
+            height: 30px;
+            width: 200px;
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="date()" id="d">showdate</button><br><br>
+    <span id="result_d"></span><br><br>
+    <button onclick="time()" id="t">showtime</button><br><br>
+    <span id="result_t"></span>
+
+    <script>
+        let n = new Date();
+        function date() {
+            date = n.toDateString();
+            document.getElementById("result_d").innerHTML = date;
+        }
+        function time() {
+            time = n.toLocaleTimeString();
+            document.getElementById("result_t").innerHTML = time;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT - TASK 7</title>
+    <style>
+        #myDIV {
+            margin-top: 70px;
+            margin-bottom: 20px;
+            position: relative;
+            animation: mymove 5s infinite;
+            animation-play-state: paused;
+        }
+
+        .con {
+            width: 500px;
+            margin-top: 100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        p {
+            color: blue;
+            font-size: large;
+        }
+
+        @keyframes mymove {
+            from {
+                left: 0px;
+            }
+
+            to {
+                left: 900px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="myDIV">
+        <img id="train" src="https://js.cx/clipart/train.gif" alt="not">
+    </div>
+    <div class="con">
+        <p><strong>Click the buttons to Play/Pause the animation:</strong></p>
+        <button onclick="myPlayFunction()">Play</button>
+        <button onclick="myPauseFunction()">Pause</button>
+    </div>
+
+    <script>
+        function myPlayFunction() {
+            document.getElementById("myDIV").style.animationPlayState = "running";
+        }
+
+        function myPauseFunction() {
+            document.getElementById("myDIV").style.animationPlayState = "paused";
+        }
+    </script>
+</body>
+
+</html>

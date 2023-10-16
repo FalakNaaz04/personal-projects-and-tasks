@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT - TASK 2</title>
+    <style>
+        body {
+            display: block;
+            width: 500px;
+            padding-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: large;
+        }
+
+        #s {
+            height: 30px;
+            width: 200px;
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Write a JavaScript function that returns a passed string with letters in
+        alphabetical order.</h3>
+    string: <input type="text" id="s"><br><br>
+    <button onclick="display()">Sort</button>
+    <h4>Sorted string:</h4>
+    <span id="result"></span>
+    <script>
+        function alphabet_sort(a) {
+            return a.split('').sort().join('');
+        }
+        function display() {
+            str = document.getElementById("s").value;
+            s_str = alphabet_sort(str);
+            document.getElementById("result").innerHTML = s_str;
+        }
+    </script>
+</body>
+
+</html>

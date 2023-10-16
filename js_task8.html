@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT - TASK 8</title>
+    <style>
+        .con {
+            /* border: 2px solid black; */
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 100px;
+            margin-bottom: 130px;
+            width: 750px;
+            font-size: large;
+        }
+
+        body {
+            background: linear-gradient(rgb(245, 245, 157), pink, rgb(250, 176, 188), rgb(243, 81, 243));
+        }
+
+        .ethnus {
+            text-align: right;
+        }
+
+        .btn {
+            border-radius: 10px;
+            display: block;
+            background-color: red;
+            color: white;
+            font-size: large;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h2 {
+            color: blue;
+            text-align: center;
+        }
+
+        .box {
+            width: 500px;
+        }
+
+        #country {
+            font-size: medium;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="con">
+        <h2>Registration Form</h2>
+        <form name="f1" action="" onsubmit="return validate()">
+            <table>
+                <tr>
+                    <td><strong>First Name:</strong></td>
+                    <td>
+                        <input type="text" name="firstname" class="box" />
+                        <span id="firstnamelocation" style="color:red"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Last Name:</strong></td>
+                    <td>
+                        <input type="text" name="lastname" class="box" />
+                        <span id="lastnamelocation" style="color:red"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Email:</strong></td>
+                    <td>
+                        <input type="email" name="email" class="box" />
+                        <span id="emaillocation" style="color:red"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Password:</strong></td>
+                    <td>
+                        <input type="password" name="pwd" class="box" />
+                        <span id="pwdlocation" style="color:red"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Re-enter Password:</strong></td>
+                    <td>
+                        <input type="password" name="rpwd" class="box" />
+                        <span id="rpwdlocation" style="color:red"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Gender:</strong></td>
+                    <td>
+                        <input type="radio" name="gender" id="genderid">Male
+                        <input type="radio" name="gender" id="genderid">Female
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Age:</strong></td>
+                    <td>
+                        <input type="number" name="age" class="box" />
+                        <span id="agelocation" style="color:red"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Phone no:</strong></td>
+                    <td>
+                        <input type="tel" name="phoneno" class="box" />
+                        <span id="phonenolocation" style="color:red"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Address:</strong></td>
+                    <td>
+                        <textarea name="address" id="address" cols="66" rows="5"></textarea>
+                        <span id="addresslocation" style="color:red"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>State:</strong></td>
+                    <td>
+                        <input type="text" name="state" class="box" />
+                        <span id="statelocation" style="color:red"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Country:</strong></td>
+                    <td>
+                        <select name="country" id="country" class="box">
+                            <option value="">Choose your country</option>
+                            <option value="ind">India</option>
+                            <option value="aus">Australia</option>
+                            <option value="us">United Kingdom</option>
+                        </select>
+                        <span id="countrylocation" style="color:red"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Languages known:</strong></td>
+                    <td>
+                        <input type="checkbox" name="eng">English
+                        <input type="checkbox" name="kan">Kannada
+                        <input type="checkbox" name="hin">Hindi
+                        <input type="checkbox" name="tel">Telugu
+                        <span id="languageslocation" style="color:red"></span>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <input type="checkbox">Hereby I declare all the given details are true <br>
+
+            <p class="ethnus">Log in to <a href="https://ethnus.com/" target="_blank">Ethnus</a> website</p>
+
+            <button type="submit" class="btn" value="submit">REGISTER</button>
+        </form>
+    </div>
+
+    <script type="text/javascript">
+        function validate() {
+            var firstname = document.f1.firstname.value;
+            var lastname = document.f1.lastname.value;
+            var email = document.f1.email.value;
+            var pwd = document.f1.pwd.value;
+            var rpwd = document.f1.rpwd.value;
+            var age = document.f1.age.value;
+            var phoneno = document.f1.phoneno.value;
+            var address = document.f1.address.value;
+            var state = document.f1.state.value;
+            var status = false;
+            if (firstname == "") {
+                document.getElementById("firstnamelocation").innerHTML = "POOR";
+                status = false;
+            }
+            else {
+                status = true;
+            }
+            if (lastname == "") {
+                document.getElementById("lastnamelocation").innerHTML = "POOR";
+                status = false;
+            }
+            else {
+                status = true;
+            }
+            if (email == "") {
+                document.getElementById("emaillocation").innerHTML = "POOR";
+                status = false;
+            }
+            else {
+                status = true;
+            }
+            if (pwd == "") {
+                document.getElementById("pwdlocation").innerHTML = "POOR";
+                status = false;
+            }
+            else {
+                if (rwpd === pwd) {
+                    document.getElementById("rpwdlocation").innerHTML = "MISMATCH";
+                    status = false;
+                }
+                status = true;
+            }
+            if (age == "") {
+                document.getElementById("agelocation").innerHTML = "POOR";
+                status = false;
+            }
+            else {
+                status = true;
+            }
+            if (phoneno == "") {
+                document.getElementById("phonenolocation").innerHTML = "POOR";
+                status = false;
+            }
+            else {
+                status = true;
+            }
+            if (address == "") {
+                document.getElementById("addresslocation").innerHTML = "POOR";
+                status = false;
+            }
+            else {
+                status = true;
+            }
+            if (state == "") {
+                document.getElementById("statelocation").innerHTML = "POOR";
+                status = false;
+            }
+            else {
+                status = true;
+            }
+            // if (rwpd === pwd) {
+            //     document.getElementById("rpwdlocation").innerHTML = "MISMATCH";
+            //     status = false;
+            // }
+            // else if (rwpd == "") {
+            //     document.getElementById("rpwdlocation").innerHTML = "POOR";
+            //     status = false;
+            // }
+            // else {
+            //     status = true;
+            // }
+
+            return status;
+        }  
+    </script>
+
+</body>
+
+</html>
