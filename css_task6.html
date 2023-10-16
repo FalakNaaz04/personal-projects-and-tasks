@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>CSS - TASK 6</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        img {
+            height: 160px;
+            width: 170px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .container {
+            border: 2px solid black;
+            width: 500px;
+            padding: 20px;
+            display: block;
+            margin-top: 40px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #username,
+        #password {
+            margin-top: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-right: 290px;
+        }
+
+        #login {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 200px;
+            padding-right: 200px;
+            font-size: large;
+            color: white;
+            background-color: rgb(48, 216, 39);
+            border: none;
+        }
+
+        #cancel {
+            padding: 10px;
+            font-size: medium;
+            color: white;
+            background-color: rgb(241, 87, 87);
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+
+        #link {
+            margin-left: 200px;
+        }
+
+        .footer {
+            background-color: #f1f1f1;
+            padding: 15px;
+            width: 445px;
+        }
+    </style>
+</head>
+<form action="" class="container">
+
+    <img src="avatar for form.png" alt="Avatar" class="avatar">
+    <br><br>
+
+    <label for="username"><strong>Username</strong></label><br>
+    <input type="text" id="username" placeholder="Enter Username">
+    <br><br>
+
+    <label for="password"><strong>Password</strong></label><br>
+    <input type="password" id="password" placeholder="Enter Password">
+    <br><br>
+
+    <input type="submit" value="Login" id="login">
+    <br><br>
+
+    <input type="checkbox" id="rememberme">
+    <label for="rememberme">Remember me</label>
+    <br><br>
+
+    <div class="footer">
+        <input type="reset" value="cancel" id="cancel">
+        <a href="#" id="link">Forgot password?</a>
+    </div>
+
+</form>
+
+<body>
+
+</body>
+
+</html>

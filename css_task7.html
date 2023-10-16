@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - TASK 7</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        html {
+            background-color: rgb(159 6 83);
+        }
+
+        .container {
+            background-color: rgb(118 16 67);
+            padding: 50px;
+            margin: 100px auto 0px auto;
+            width: fit-content;
+        }
+
+        form {
+            background-color: rgb(118 16 67);
+        }
+
+        #name {
+            margin-left: 72px;
+        }
+
+        #email {
+            margin-left: 75px;
+        }
+
+        #pwd {
+            margin-left: 45px;
+        }
+
+        #phoneno {
+            margin-left: 10px;
+        }
+
+        #lang {
+            margin-left: 42px;
+        }
+
+        #zip {
+            margin-left: 50px;
+        }
+
+        #way {
+            margin-left: 69px;
+        }
+
+        .gender {
+            margin-right: 65px;
+        }
+
+        .btn {
+            padding-left: 142px;
+            padding-right: 142px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            background-color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .textwhite {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="">
+            <label for="name" class="textwhite">Name:</label>
+            <input type="text" id="name" placeholder="Your name"><br><br>
+
+            <label for="email" class="textwhite">Email:</label>
+            <input type="email" id="email" placeholder="Your email"><br><br>
+
+            <label for="pwd" class="textwhite">Password:</label>
+            <input type="password" id="pwd"><br><br>
+
+            <label for="phoneno" class="textwhite">Phone number:</label>
+            <input type="tel" id="phoneno"><br><br>
+
+            <label for="gdr" class="gender textwhite">Gender</label>
+            <span class="textwhite">Male:</span><input type="radio" name="gender" id="gdr">
+            <span class="textwhite">Female:</span><input type="radio" name="gender" id="gdr">
+            <span class="textwhite">Other:</span><input type="radio" name="gender" id="gdr"><br><br>
+
+            <label for="lang" class="textwhite">Language:</label>
+            <select name="language" id="lang">
+                <option value="">Select language</option>
+                <option value="e">english</option>
+                <option value="h">hindi</option>
+                <option value="t">tamil</option>
+                <option value="t">telugu</option>
+            </select><br><br>
+
+            <label for="zip" class="textwhite">Zip code:</label>
+            <input type="postal" id="zip"><br><br>
+
+            <label for="way" class="textwhite">About:</label>
+            <textarea name="way" id="way" cols="30" rows="1" placeholder="Write about yourself"></textarea><br><br>
+
+            <input type="submit" value="Register" class="btn topics">
+
+        </form>
+    </div>
+</body>
+
+</html>

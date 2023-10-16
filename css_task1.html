@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - TASK 1</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: block;
+            margin-top: 65px;
+            margin-left: auto;
+            margin-right: auto;
+            border: solid 1px black;
+            border-radius: 12px;
+            width: 627px;
+            padding: 1px;
+            background-color: #81d8d2;
+        }
+
+        .element {
+            border: solid 1px black;
+            border-radius: 9px;
+            padding-inline-end: 171px;
+        }
+
+        .colname {
+            text-align: center;
+            border: solid 1px black;
+            border-radius: 9px;
+        }
+
+        #s11,
+        #s21 {
+            border-radius: 6px;
+        }
+
+        #s12,
+        #s22 {
+            border-radius: 10px;
+        }
+
+        #s13,
+        #s23 {
+            border-radius: 20px;
+        }
+
+        #s31 {
+            border-radius: 50px;
+        }
+
+        #s32 {
+            border-radius: 3px;
+        }
+
+        #s33 {
+            border-top-right-radius: 15px;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 3px;
+        }
+
+        .square_border {
+            /* border: 1px solid black; */
+            width: 217px;
+            padding: 19px;
+            margin-top: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            display: grid;
+            grid-template-columns: 60px 60px 60px;
+            grid-template-rows: 60px 60px 60px;
+        }
+
+        .square {
+            border: 3px solid rgb(38, 187, 38);
+            height: 50px;
+            width: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <table>
+            <!--border="10"    is an attribute-->
+            <tr>
+                <th class="colname">Firstname</th>
+                <th class="colname">Lastname</th>
+                <th class="colname">Age</th>
+            </tr>
+            <tr>
+                <td class="element">Jill</td>
+                <td class="element">Smith</td>
+                <td class="element">50</td>
+            </tr>
+            <tr>
+                <td class="element">Eve</td>
+                <td class="element">Jackson</td>
+                <td class="element">94</td>
+            </tr>
+            <tr>
+                <td class="element">John</td>
+                <td class="element">Doe</td>
+                <td class="element">80</td>
+            </tr>
+        </table>
+    </div>
+    <br><br>
+
+    <div class="square_border">
+
+        <div id="s11" class="square"></div>
+        <div id="s12" class="square"></div>
+        <div id="s13" class="square"></div>
+
+        <div id="s21" class="square"></div>
+        <div id="s22" class="square"></div>
+        <div id="s23" class="square"></div>
+
+        <div id="s31" class="square"></div>
+        <div id="s32" class="square"></div>
+        <div id="s33" class="square"></div>
+
+    </div>
+</body>
+
+</html>
